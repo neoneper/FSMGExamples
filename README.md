@@ -5,4 +5,4 @@ This project contains examples of use for the FSMG: https://github.com/neoneper/
 - NavMeshAgent Example: 
 Contains new nodes for the graph and assets to be used by customizable action and decision nodes
 
-[NewNodes](https://i.gyazo.com/309d410f756955e40b006174de5a5a75.png)
+![NewNodes](https://i.gyazo.com/309d410f756955e40b006174de5a5a75.png)
