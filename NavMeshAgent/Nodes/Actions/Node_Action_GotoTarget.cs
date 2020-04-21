@@ -11,21 +11,21 @@ namespace XNode.FSMG
     public class Node_Action_GotoTarget : NodeBase_Action
     {
 
-        private FSMTarget go = null;
-        private FSMTarget TargetGo
+        private FSMTargetBehaviour go = null;
+        private FSMTargetBehaviour TargetGo
         {
             get
             {
                 if (go == null)
                 {
-                    go = GetInputValue<FSMTarget>("inputTarget", this.inputTarget);
+                    go = GetInputValue<FSMTargetBehaviour>("inputTarget", this.inputTarget);
                 }
 
                 return go;
             }
         }
         [Input(connectionType = ConnectionType.Override, typeConstraint = TypeConstraint.Strict, backingValue = ShowBackingValue.Never)]
-        public FSMTarget inputTarget;
+        public FSMTargetBehaviour inputTarget;
 
         [Output]
         public NodeBase_Action outAction = null;
@@ -41,7 +41,7 @@ namespace XNode.FSMG
 
 
             NavMeshAgent agent = fsm.navMeshAgent;
-            FSMTarget target = TargetGo;
+            FSMTargetBehaviour target = TargetGo;
             AIAgentStats agentStats = fsm.agentStats;
 
             if (TargetGo == null)
