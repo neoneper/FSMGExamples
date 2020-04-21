@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using XNode.FSMG;
 
 namespace XNode.FSMG.Components
 {
@@ -50,10 +49,10 @@ namespace XNode.FSMG.Components
             if (graph != null)
             {
                 graph.InitGraph(this);
+                navMeshAgent.enabled = true;
                 isReady = true;
             }
         }
-
         private void Update()
         {
             if (!isReady) return;
